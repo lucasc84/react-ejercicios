@@ -1,0 +1,11 @@
+#root {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.container {
+    width: 90vw;
+    background-color: aqua;
+}
