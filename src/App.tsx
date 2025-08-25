@@ -1,11 +1,11 @@
 import { Suspense, lazy } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 
-// Autodescubrimiento de ejercicios: src/exercises/**/Exercise.tsx
-const modules = import.meta.glob("./exercises/**/Exercise.tsx");
+// Autodescubrimiento de ejercicios: src/exercises/**/Exercise.tsx y Exercise.jsx
+const modules = import.meta.glob("./exercises/**/Exercise.{tsx,jsx}");
 
 const routes = Object.entries(modules).map(([path, loader]) => {
-  const match = path.match(/exercises\/([^/]+)\/Exercise\.tsx$/);
+  const match = path.match(/exercises\/([^/]+)\/Exercise\.(tsx|jsx)$/);
   const slug = match?.[1] ?? "ejercicio";
   const Component = lazy(loader as any);
   return { slug, Component };

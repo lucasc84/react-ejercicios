@@ -11,7 +11,7 @@ export default function App() {
   // Componente
   const Salute = () => <p style={{ marginLeft: 15 }}>Hello {user}</p>;
 
-  const handleClick = (evt: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (evt) => {
     console.log(evt);
   };
 
