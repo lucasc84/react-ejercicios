@@ -1,3 +1,7 @@
+import React from 'react';
+import './Exercise.css'
+
+
 const App = () => {
   return (
     <Layout title="Mi Componente">
@@ -16,3 +20,5 @@ const Layout = (props) => {
     </div>
   );
 };
+
+export default App;
